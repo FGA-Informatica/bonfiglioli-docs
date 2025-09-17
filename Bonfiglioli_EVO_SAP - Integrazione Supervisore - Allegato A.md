@@ -5319,7 +5319,7 @@ La valorizzazione di ciascuna caratteristica è da “costruire” mediante gli 
 
 ```
 
-# 4.3 SFC Start (start operation)
+# 5.4 SFC Start (start operation)
 
 > Verb: POST
 
@@ -5379,7 +5379,7 @@ Il/i seriali che si desidera avviare devono essere “in coda” alla specifica 
 
 Stesso errore viene ritornato se si cerca di avviare un seriale senza aver completato le fasi precedenti del ciclo.
 
-# 4.4 SFC Complete (end operation)
+# 5.5 SFC Complete (end operation)
 
 > Verb: POST
 
@@ -5442,7 +5442,7 @@ Il/i seriali che si desidera completare devono essere “in lavorazione” alla 
 }
 ```
 
-# 4.5 SFC Sign Off (pause operation)
+# 5.6 SFC Sign Off (pause operation)
 
 > Verb: POST
 
@@ -5492,7 +5492,7 @@ Il/i seriali che si desidera mettere in pausa devono essere “in lavorazione”
 }
 ```
 
-# 4.6.1 Start Labor
+# 5.7.1 Start Labor
 
 > Verb: POST
 
@@ -5578,7 +5578,7 @@ Nel caso in cui l’operatore fosse già registrato sul centro di lavoro (o su u
 
 Sarà necessario esseguire il labor off per l’operatore (con relativa API) per riuscire a far partire il nuovo movimento.
 
-# 4.6.2 Stop Labor
+# 5.7.2 Stop Labor
 
 > Verb: POST
 
@@ -5662,7 +5662,7 @@ Nel caso in cui l’operatore non fosse già registrato sul centro di lavoro vie
 }
 ```
 
-# **4.7.1 Parameters for a serial**
+# **5.8.1 Parameters for a serial**
 
 > Verb: GET
 
@@ -5803,7 +5803,7 @@ Nel caso invece si specificassero dei valori non validi a livello di centro di l
 }
 ```
 
-# **4.7.2 Sample parameters**
+# **5.8.2 Sample parameters**
 
 > Verb: POST
 
@@ -5864,7 +5864,7 @@ Nel caso invece si specificassero dei valori non validi a livello di centro di l
 
 - Effettuare la registrazione di una serie di parametri di una determinata data collection (piano controllo qualità)
 
-# 4.9 SFC in Work
+# 5.10 SFC in Work
 
 > Verb: GET
 
@@ -5901,7 +5901,7 @@ Nel caso invece si specificassero dei valori non validi a livello di centro di l
 
 Nel caso in cui sul centro di lavoro non ci fossero seriali in lavorazione l’API risponde 200 OK con un array vuoto
 
-# 4.10 Order Execution Information
+# 5.11 Order Execution Information
 
 > Verb: GET
 
@@ -8629,7 +8629,7 @@ Nel caso in cui sul centro di lavoro non ci fossero seriali in lavorazione l’A
 - Calcolare eventuali quantità di produzione di un ordine in base allo stato di avanzamento dei vari seriali figli
 - Conoscere eventuali dati per controlli a livello di fase/quantità durante l’avanzamento produzione su supervisore
 
-# 4.11.1 Create a Non Conformance
+# 5.12.1 Create a Non Conformance
 
 > Verb: POST
 
@@ -8683,7 +8683,7 @@ In ids ci sono gli identificativi dell’oggetto “non conformità” creato su
 
 - Aprire una nuova non conformità su un seriale per segnalare un difetto riscontrato e far partire il flusso di rilavorazione/riparazione. La NC creata avrà come stato OPEN.
 
-# 4.11.2 Get Non Conformance by serial
+# 5.12.2 Get Non Conformance by serial
 
 > Verb: GET
 
@@ -8852,7 +8852,7 @@ Potrebbero esserci n non conformità create per uno stesso seriale. Il loro stat
 
 - Conoscere le informazioni delle non conformità (aperte e chiuse) per un determinato seriale
 
-# 4.11.3 Check Non Conformance Open
+# 5.12.3 Check Non Conformance Open
 
 > Verb: POST
 
@@ -8898,7 +8898,7 @@ Nel caso in cui non ci fossero NC aperte (tutte gestite), allora ritorna 200 OK 
 
 - Verificare se esiste una NC ancora aperta per un determinato seriale
 
-# 4.11.4 Close a Non Conformance
+# 5.12.4 Close a Non Conformance
 
 > Verb: POST
 
@@ -8933,7 +8933,7 @@ Nel caso fossero stati specificati dei parametri non validi ritorna un errore 40
 
 - Chiudere una specifica non conformità
 
-# 4.11.5 Re-Open a Non Conformance
+# 5.12.5 Re-Open a Non Conformance
 
 > Verb: POST
 
@@ -8968,7 +8968,7 @@ Nel caso fossero stati specificati dei parametri non validi ritorna un errore 40
 
 - Ri-aprire una non conformità chiusa per qualche ragione in precendenza
 
-# 4.12.1 Machine Down
+# 5.13.1 Machine Down
 
 > Verb: POST
 
@@ -9018,7 +9018,7 @@ Nel caso fossero stati specificati dei parametri non validi ritorna un errore 40
 
 - Dichiarare un fermo su un determinato centro di lavoro che lo rende indisponibile
 
-# 4.12.2 Machine productive
+# 5.13.2 Machine productive
 
 > Verb: POST
 
